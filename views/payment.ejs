@@ -1,155 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Payment Gateway</title>
-  <style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .payment-container {
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    text-align: center;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-  }
-  
-  .form-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .pay-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-  }
-  
-  .pay-button:hover {
-    background-color: #45a049;
-  }
-  
-  #payment-message {
-    margin-top: 15px;
-    font-size: 1em;
-    text-align: center;
-    color: green;
-  }
-  
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .payment-container {
+            width: 350px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .payment-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #555;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .form-group input:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <div class="payment-container">
-    <h1>Payment Gateway</h1>
-    <form id="payment-form">
-      <div class="form-group">
-        <label for="card-name">Cardholder Name</label>
-        <input type="text" id="card-name"  required>
-      </div>
-      <div class="form-group">
-        <label for="card-number">Card Number</label>
-        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19" required>
-      </div>
-      <div class="form-row">
-        <div class="form-group">
-          <label for="expiry-date">Expiry Date</label>
-          <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5" required>
+    <div class="payment-container">
+        <h2>Payment Gateway</h2>
+        <form action="/success" method="post">
+          <div class="form-group">
+            <label for="name">Cardholder Name</label>
+            <input type="text" id="name" placeholder="John Doe">
         </div>
-        <div class="form-group">
-          <label for="cvv">CVV</label>
-          <input type="text" id="cvv" placeholder="123" maxlength="3" required>
-        </div>
-      </div>
-      <button type="submit" class="pay-button">payment</button>
-    </form>
-    <div id="payment-message"></div>
-  </div>
-  <script>
-    document.getElementById('payment-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-  
-    const cardName = document.getElementById('card-name').value;
-    const cardNumber = document.getElementById('card-number').value;
-    const expiryDate = document.getElementById('expiry-date').value;
-    const cvv = document.getElementById('cvv').value;
-  
-    // Validate inputs (basic validation)
-    if (!cardName || !cardNumber || !expiryDate || !cvv) {
-      showMessage('Please fill all fields', 'red');
-      return;
-    }
-  
-    if (cardNumber.length !== 19 || !/^\d{4} \d{4} \d{4} \d{4}$/.test(cardNumber)) {
-      showMessage('Invalid card number format', 'red');
-      return;
-    }
-  
-    if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
-      showMessage('Invalid expiry date format', 'red');
-      return;
-    }
-  
-    if (cvv.length !== 3 || !/^\d{3}$/.test(cvv)) {
-      showMessage('Invalid CVV', 'red');
-      return;
-    }
-  
-    // Simulate payment processing
-    showMessage('Processing payment...', 'blue');
-    setTimeout(() => {
-      showMessage('Payment Successful!', 'green');
-    }, 2000);
-    
-    
 
-  });
-  
-  function showMessage(message, color) {
-    const paymentMessage = document.getElementById('payment-message');
-    paymentMessage.textContent = message;
-    paymentMessage.style.color = color;
-  }
-  
-  </script>
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+            </div>
+
+            <div class="form-group">
+                <label for="expiry">Expiry Date</label>
+                <input type="text" id="expiry" placeholder="MM/YY">
+            </div>
+
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" placeholder="123">
+            </div>
+            
+            <button type="submit" class="btn">Pay Now</button>
+        </form>
+    </div>
 </body>
 </html>

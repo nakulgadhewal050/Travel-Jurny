@@ -30,10 +30,10 @@ app.get("/login", (req, res) => {
 
 //home page
 
-app.get("/home", isLoggedIn, async function (req,res) {
-  res.render('home', { user: req.user });
-  
-})
+app.get("/home", isLoggedIn, async (req, res) => {
+  console.log(isLoggedIn)
+  res.render("home", { user: req.user }); // Pass user data to the template
+});
 
 
 
@@ -94,19 +94,22 @@ bcrypt.compare(password, user.password, function(err, result){
 
 //logedin funtion
 
-function isLoggedIn(req, res, next){
-  if(req.cookies.token === "") res.send("you must be logged in");
-  else {
-      let data = jwt.verify(req.cookies.token, "shhh");
-
+function isLoggedIn(req, res, next) {
+  try {
+      if (!req.cookies.token || req.cookies.token === "") {
+          return res.render("login");
+      }
+      
+      const data = jwt.verify(req.cookies.token, "shhh");
       req.user = data;
-
       next();
+  } catch (err) {
+      return res.send("Invalid or expired token");
   }
-  }
+}
 
   // navbar
-  app.get('/about', (req, res) => {
+  app.get('/about',isLoggedIn, (req, res) => {
     res.render("about")
   })
 
@@ -123,7 +126,7 @@ function isLoggedIn(req, res, next){
 
 // 1) mountain
 
-app.get("/mountain", function(req,res) {
+app.get("/mountain",isLoggedIn, function(req,res) {
   res.render("mountain")
 })
 
@@ -131,7 +134,28 @@ app.get("/mountain", function(req,res) {
 app.get("/mountain-first", (req,res) => {
   res.render("mountain-first")
 })
+
+app.get("/kanchenjungha", (req,res) => {
+  res.render("kanchenjungha")
+})
+
+app.get("/MachuPicchu", (req,res) => {
+  res.render("MachuPicchu")
+})
   
+app.get("/YosemiteNationalPark", (req,res) => {
+  res.render("YosemiteNationalPark")
+})
+
+app.get("/MountAbu", (req,res) => {
+  res.render("MountAbu")
+})
+
+app.get("/PoonHillNepal", (req,res) => {
+  res.render("PoonHillNepal")
+})
+
+
 app.get("/religious", (req,res) => {
   res.render("religious")
 })
@@ -176,6 +200,15 @@ app.post("/booking", async function(req, res) {
 app.get("/payment", (req,res) => {
   res.render("payment")
 })
+
+app.post("/success", (req,res) => {
+  res.send("success")
+})
+
+app.get("/profile", (res,req) => {
+  res.render("profile")
+})
+
 
 
 app.listen(port, () => {
