@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hill Stations</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: black;
+      background-color: black;
+    }
+
+    nav {
+            display: flex;
+            justify-content: flex-start; /* Aligns navigation to the left */
+            align-items: center;
+            padding-left: 20px; /* Adds spacing from the edge */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin-top: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 15px;
+           
+        }
+
+    
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .hero-section {
+      position: relative;
+      height: 400px;
+      background: url('https://www.aanavandi.com/blog/wp-content/uploads/2019/08/ksrtc-munnar-Riyas-Paloli%E2%80%8E.jpg') center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-section h1 {
+      margin: 20px;
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    
+    /* Tabs Section */
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      background: #222;
+      padding: 10px 0;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    .tab:hover,
+    .tab.active {
+      color: #fff;
+    }
+
+    /* Cards Section */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    .card p {
+      margin: 10px 0;
+      color: #aaa;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .tab {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/destination">Destinations</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+  <div class="hero-section">
+    <h1>Explore Hill Stations</h1>
+  </div>
+
+  <div class="container">
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active">Famous Hill Stations</div>
+      <div class="tab">Best Time to Visit</div>
+      <div class="tab">Travel Tips</div>
+      <div class="tab">Top Attractions</div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTxpqXAUt1ZeQ6XMFlUCQRQUlWJbrh6p4IBK93goWCcrDT7N6OeFGMrn8CkjG6SafHXsyzb1sGDRbLiVDk7tQghLmIGyJlnkhPJMOQgzg" alt="Mussoorie">
+            <div class="card-content">
+              <h3>Mussoorie, Uttarakhand</h3>
+              <p>Known as the 'Queen of Hills', Mussoorie offers breathtaking views of the Himalayan range.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://jollymiles.com/wp-content/uploads/2021/01/img_20201230_104356.jpg?w=1000" alt="McLeod Ganj">
+            <div class="card-content">
+              <h3>McLeod Ganj, Himachal Pradesh</h3>
+              <p>Home to the Dalai Lama, this hill station offers a peaceful retreat and scenic landscapes.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://www.thegranddragonladakh.com/blog/admin/assets/img/post/image_2023-08-22-05-49-39_64e44c731bc7e.jpg" alt="Leh-Ladakh">
+            <div class="card-content">
+              <h3>Leh-Ladakh, Jammu & Kashmir</h3>
+              <p>Experience the rugged beauty of the high mountains and crystal-clear lakes in the Himalayas.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="https://www.savaari.com/blog/wp-content/uploads/2022/07/rasheda-akter-H1j7GqWsfpI-unsplash.jpg" alt="Shillong">
+            <div class="card-content">
+              <h3>Shillong, Meghalaya</h3>
+              <p>Known as the 'Scotland of the East', Shillong is famous for its lush greenery and waterfalls.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="https://lh5.googleusercontent.com/p/AF1QipNtBishnc1Io2IEThUYQrJFIG2ckdadz-XEBl1G=w540-h312-n-k-no" alt="Nainital">
+            <div class="card-content">
+              <h3>Nainital, Uttarakhand</h3>
+              <p>Set around a beautiful lake, Nainital is known for its serene surroundings and vibrant market.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="https://experiencemyindia.com/wp-content/uploads/2024/09/Kullu-Manali-Blog.jpg" alt="Kullu">
+            <div class="card-content">
+              <h3>Kullu, Himachal Pradesh</h3>
+              <p>Experience the natural beauty of Kullu, known for its apple orchards and scenic valleys.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcSlsfVd4sPne9cmi6gNQpSNyYRJUsvksGp6FcHHIs9cODmQOwbERaLuO0kbYUOew4tw7yg1MZfULwG2_aMS5sjodSQSkL8tDEQK3p_Bbg" alt="Darjeeling">
+            <div class="card-content">
+              <h3>Darjeeling, West Bengal</h3>
+              <p>Known for its tea plantations and the iconic Darjeeling Himalayan Railway, it's a must-visit hill station.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="https://www.tripplannersindia.com/assets/blog/images/placestovisitinooty/Ooty_Lake.webp" alt="Ooty">
+            <div class="card-content">
+              <h3>Ooty, Tamil Nadu</h3>
+              <p>Famous for its lush gardens, Nilgiri Mountain Railway, and cool climate, Ooty is a popular hill station.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card">
+            <img src="https://www.india.com/wp-content/uploads/2024/08/abbe.jpg" alt="Coorg">
+            <div class="card-content">
+              <h3>Coorg, Karnataka</h3>
+              <p>Coorg is a paradise for nature lovers, known for its coffee plantations, hills, and scenic viewpoints.</p>
+              <a href="#">Explore Packages</a>
+            </div>
+        </div>
+
+    </div>
+  </div>
+</body>
+</html>

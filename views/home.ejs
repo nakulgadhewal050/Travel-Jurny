@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Planner</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-wheat-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="flex items-center space-x-4">
+            <img src="https://play-lh.googleusercontent.com/pDqIvSgrXqjEOHHQ5vAfp75zxn7ttN3KtngB5rEQYqiPVELN9mhySHPV40GxXYilgcXX"
+                alt="JourniMate"
+                class="w-16 h-16 rounded-full shadow-md hover:scale-110 transform transition-transform duration-300">
+        </div>
+        <div class="container mx-auto ">
+            <h1 class="text-4xl font-bold" style="display: flex;
+                align-items: center; justify-content: center; margin-top: -61px; font-family: Dancing Script, cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal; font-size: 60px;">
+                JourniMate</h1>
+           
+
+
+           <div class="w-full flex justify-end " style="    position: absolute; top: 112px;">
+            <a href="/signup" style="position: absolute; right: 60px; text-align: center; bottom: -25px;">
+                <img src="https://i.pinimg.com/564x/57/00/c0/5700c04197ee9a4372a35ef16eb78f4e.jpg" alt="Account"
+                     class="-dOa_b L_FVxe" width="40" height="24" style="border-radius: 20px; margin-left: 9px; margin-bottom: -4px;"> 
+                     
+            </a>
+            
+               
+            </div>
+
+            <p class="mt-2" style="    
+                margin: -10px;
+                font-family: Dancing Script, cursive;
+                font-optical-sizing: auto;
+                font-weight: weight;
+                font-style: normal;
+                font-size: 25px;
+                margin-top: 10px;
+                display: block;
+                position: relative;
+                left: 530px;">
+                Find your perfect destination
+                based on your interests! </p>
+
+                <nav class="mt-4">
+                    <ul class="flex space-x-4">
+                        <li><a href="/home" class="no-underline hover:no-underline">Home</a></li>
+                        <li><a href="/about" class="no-underline hover:no-underline">About</a></li>
+                        <li><a href="/destination" class="no-underline hover:no-underline">Destinations</a></li>
+                        <li><a href="/contact" class="no-underline hover:no-underline">Contact</a></li>
+                    </ul>
+                </nav>
+                
+        </div>
+    </header>
+
+
+
+
+    <main class="container mx-auto p-8">
+
+
+        
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4">Explore by Interest</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105 max-w-sm mx-auto">
+                    <!-- Image with hover zoom effect -->
+                    <img src="https://t4.ftcdn.net/jpg/08/75/29/69/240_F_875296975_jrbYR4JfiFGbV4svRQdhLp4sQjFcDt8H.jpg"
+                        alt="Destination 1"
+                        class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+                    <!-- Title with hover effect -->
+                    <h3
+                        class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                        Mountain
+                    </h3>
+
+                    <!-- Description with hover effect -->
+                    <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 mb-4">
+                        Peaceful places to unwind and relax.
+                    </p>
+                    <br>
+
+                    <!-- Explore More Button -->
+                    <button 
+                        class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                        <a href="/mountain">Explore More</a>
+                        
+                    </button>
+
+                    
+                </div>
+
+                <!-- Additional Tailwind CSS for hover effects and transitions -->
+                <style>
+                    /* Enhanced hover effects */
+                    .group:hover .shadow-lg {
+                        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                        /* Deeper shadow on hover */
+                    }
+
+                    .group:hover .text-blue-500 {
+                        color: #3182ce;
+                        /* Hover text color for title */
+                    }
+
+                    .group:hover .text-gray-800 {
+                        color: #2d3748;
+                        /* Hover text color for description */
+                    }
+
+                    /* Tooltip transition */
+                    .group:hover .tooltip {
+                        opacity: 1;
+                        /* Tooltip appears on hover */
+                    }
+
+                    /* Button Hover Effect */
+                    .group:hover button {
+                        transform: translateY(-3px);
+                        /* Slight lift on button hover */
+                    }
+                </style>
+
+
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105 max-w-sm mx-auto">
+                    <!-- Image with hover zoom effect -->
+                    <img src="https://www.bbc.co.uk/staticarchive/47ad1594526e8a03d16be7e9400ff5589bf26ea6.jpg"
+                        alt="Destination 1"
+                        class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+
+                    <!-- Title with hover effect -->
+                    <h3
+                        class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                        Religious
+                    </h3>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-4 transition-all duration-300 ease-in-out hover:text-gray-700">
+                        Destinations rich in history and culture.
+                    </p>
+                   <br>
+
+                    <!-- Explore More Button -->
+                    <button
+                        class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                        <a href="/religious">Explore More</a>
+                    </button>
+
+                   
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105">
+                    <!-- Image with hover zoom effect -->
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/KSR_Steam_special_at_Taradevi_05-02-13_56.jpeg/1200px-KSR_Steam_special_at_Taradevi_05-02-13_56.jpeg"
+                        alt="Destination 1"
+                        class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+
+                    <!-- Title with hover effect -->
+                    <h3
+                        class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                        Hills-Station
+                    </h3>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-4 transition-all duration-300 ease-in-out hover:text-gray-700">
+                        Explore the beauty of nature and the great outdoors.
+                    </p>
+
+                    <!-- Explore More Button -->
+                    <button
+                        class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                        <a href="/hills">Explore More</a>
+                    </button>
+
+
+                   
+                </div>
+
+                <div
+                    class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105">
+                    <!-- Image with hover effect -->
+                    <img src="https://media.istockphoto.com/id/968845818/photo/radhanagar-beach-havelock-island-andaman-islands.webp?b=1&s=612x612&w=0&k=20&c=_AtHm7fFamflqeD33Ck_FwfBWqzm8WB69foCts7QvOU="
+                        alt="Destination 1"
+                        class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+
+                    <!-- Title with hover effect -->
+                    <h3
+                        class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                        Beaches</h3>
+
+                    <!-- Description -->
+                    <p class="text-gray-600 mb-4">Experience vibrant nightlife and serene beach views at beautiful
+                        destinations.</p>
+
+                    <!-- Explore More Button -->
+                    <button
+                        class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                        <a href="/beaches">Explore More</a>
+                    </button>
+
+
+                   
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <hr style="    border: 1px solid;
+        color: rgb(124, 117, 247); margin-bottom: 17px;">
+
+        <section class="mb-8">
+            <h2 class="text-3xl font-semibold mb-4">Popular Destinations</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Add popular destinations here -->
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://www.pilgrimagetour.in/blog/wp-content/uploads/2023/09/Mahakaleshwar-Temple-History.jpg"
+                        alt="Destination 1" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Ujjain</h3>
+                    <p>A beautiful place to visit.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://images.jdmagicbox.com/quickquotes/listicle/listicle_1685715515790_y9pp5_1040x500.jpg"
+                        alt="Destination 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Goa</h3>
+                    <p>A must-see destination.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://cdn.britannica.com/32/1632-050-940FB0E6/Beach-resort-Bangaram-Island-India-Lakshadweep.jpg"
+                        alt="Destination 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Maldive</h3>
+                    <p>A must-see destination.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBxcG5B8B_PxY22tk1UqWJUix0a4Q-RjuaoA&s"
+                        alt="Destination 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Agra</h3>
+                    <p>A must-see destination.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://lh5.googleusercontent.com/p/AF1QipMbtaffEoTubjVXbU1VV78S5Z62zRVhalJKDpVj=w745-h431-n-k-no"
+                        alt="Destination 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Varanasi</h3>
+                    <p>A must-see destination.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://www.khyberhotels.com/blog/wp-content/uploads/2023/10/winter-kashmir-1024x562.jpg"
+                        alt="Destination 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Kashmir</h3>
+                    <p>A must-see destination.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://ihplb.b-cdn.net/wp-content/uploads/2021/09/honeymoon-in-shimla-750x430.jpg"
+                        alt="Destination 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Shimla</h3>
+                    <p>A must-see destination.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow hover:bg-gray-200">
+                    <img src="https://www.chardham-pilgrimage-tour.com/assets/images/chardham-banner7.webp"
+                        alt="Destination 2" class="w-full h-40 object-cover rounded mb-2">
+                    <h3 class="text-xl font-bold">Badrinath</h3>
+                    <p>A must-see destination.</p>
+                </div>
+
+            </div>
+        </section>
+         <hr style="    border: 1px solid;
+        color: rgb(124, 117, 247); margin-bottom: 17px;">
+
+<section class="mb-8">
+    <h2 class="text-3xl font-semibold mb-4">International Destination</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+
+
+        <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105 max-w-sm mx-auto">
+            <!-- Image with hover zoom effect -->
+            <img src="https://etimg.etb2bimg.com/photo/97052424.cms"
+                alt="Destination 1"
+                class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+            <!-- Title with hover effect -->
+            <h3
+                class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                Singapore
+            </h3>
+
+            <!-- Description with hover effect -->
+            <p class="text-gray-600 group-hover:text-gray-800 transition-colors duration-300 mb-4">
+                
+            </p>
+
+            <!-- Explore More Button -->
+            <button 
+                class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                <a href="">Explore More</a>
+                
+            </button>
+
+            
+        </div>
+
+        <!-- Additional Tailwind CSS for hover effects and transitions -->
+        <style>
+            /* Enhanced hover effects */
+            .group:hover .shadow-lg {
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                /* Deeper shadow on hover */
+            }
+
+            .group:hover .text-blue-500 {
+                color: #3182ce;
+                /* Hover text color for title */
+            }
+
+            .group:hover .text-gray-800 {
+                color: #2d3748;
+                /* Hover text color for description */
+            }
+
+            /* Tooltip transition */
+            .group:hover .tooltip {
+                opacity: 1;
+                /* Tooltip appears on hover */
+            }
+
+            /* Button Hover Effect */
+            .group:hover button {
+                transform: translateY(-3px);
+                /* Slight lift on button hover */
+            }
+        </style>
+
+
+        <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105 max-w-sm mx-auto">
+            <!-- Image with hover zoom effect -->
+            <img src="https://deih43ym53wif.cloudfront.net/dubai-palm-jumeirah-island-shutterstock_1291548640.jpg_3ab124c2b9.jpg"
+                alt="Destination 1"
+                class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+
+            <!-- Title with hover effect -->
+            <h3
+                class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                Dubai
+            </h3>
+
+            <!-- Description -->
+            <p class="text-gray-600 mb-4 transition-all duration-300 ease-in-out hover:text-gray-700">
+            
+            </p>
+
+            <!-- Explore More Button -->
+            <button
+                class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                <a href="">Explore More</a>
+            </button>
+
+           
+        </div>
+
+        <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105">
+            <!-- Image with hover zoom effect -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/KSR_Steam_special_at_Taradevi_05-02-13_56.jpeg/1200px-KSR_Steam_special_at_Taradevi_05-02-13_56.jpeg"
+                alt="Destination 1"
+                class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+
+            <!-- Title with hover effect -->
+            <h3
+                class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                London
+            </h3>
+
+            <!-- Description -->
+            <p class="text-gray-600 mb-4 transition-all duration-300 ease-in-out hover:text-gray-700">
+                
+            </p>
+
+            <!-- Explore More Button -->
+            <button
+                class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                <a href="">Explore More</a>
+            </button>
+
+
+           
+        </div>
+
+        <div
+            class="bg-white p-6 rounded-lg shadow-lg hover:bg-gray-200 transition-all duration-300 ease-in-out transform hover:scale-105">
+            <!-- Image with hover effect -->
+            <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcQ5Kd12-3Z3cqe4XwsJcPgAB_I_IyIHgpEhAkizDqLma0rtAeOziM3Dj4WYBVec-Y6Qf-_nYxMw3tZ7uamwkYnD4grm-SfPuhP4v4Vp2A"
+                alt="Destination 1"
+                class="w-full h-40 object-cover rounded-lg mb-4 transition-transform duration-300 ease-in-out transform hover:scale-110">
+
+            <!-- Title with hover effect -->
+            <h3
+                class="text-xl font-bold text-gray-800 mb-2 transition-all duration-300 ease-in-out hover:text-green-500">
+                Malaysia</h3>
+
+            <!-- Description -->
+            <p class="text-gray-600 mb-4"></p>
+
+            <!-- Explore More Button -->
+            <button
+                class="px-4 py-2 bg-green-500 text-white rounded-lg shadow-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 transition-all duration-300">
+                <a href="/mountain">Explore More</a>
+            </button>
+
+
+           
+        </div>
+
+
+
+    </div>
+</section>
+
+
+    </main>
+
+    <footer class="bg-blue-600 text-white p-4 mt-8 text-center">
+        <p>&copy; 2024 Travel Planner. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

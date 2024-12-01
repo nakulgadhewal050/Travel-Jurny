@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Package</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .booking-container {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      width: 90%;
+      max-width: 500px;
+    }
+
+    .booking-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4caf50;
+    }
+
+    .booking-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      margin-bottom: 5px;
+      font-size: 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #444;
+      background: #333;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #4caf50;
+    }
+
+    .form-group textarea {
+      resize: none;
+    }
+
+    .btn-submit {
+      background: #4caf50;
+      border: none;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #45a049;
+    }
+
+    .price-summary {
+      text-align: center;
+      font-size: 1.2rem;
+      margin: 10px 0;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="booking-container">
+    <h2>Book Your Package</h2>
+
+    <div class="price-summary">
+      <p>Selected Package: <strong>Package 1</strong></p>
+      <p>Total Price: <strong>₹14,990</strong></p>
+    </div>
+
+    <form action="#" method="POST">
+      <!-- User Details -->
+      <div class="form-group">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <!-- Travel Details -->
+      <div class="form-group">
+        <label for="travel-date">Travel Date</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="num-people">Number of People</label>
+        <input type="number" id="people" name="people" placeholder="Enter the number of travelers" required min="1">
+      </div>
+
+      <div class="form-group">
+        <label for="upi-number">UPI Number</label>
+        <input type="text" id="upi" name="upi" placeholder="Enter your UPI number" 
+            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" 
+            required 
+            title="UPI number should be in the format: username@bank">
+    </div>
+    
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-submit">Confirm Booking</button>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beach Destinations</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background-color: black;
+    }
+
+    nav {
+            display: flex;
+            justify-content: flex-start; /* Aligns navigation to the left */
+            align-items: center;
+            padding-left: 20px; /* Adds spacing from the edge */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin-top: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 15px;
+           
+        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    .hero-section {
+      position: relative;
+      height: 400px;
+      background: url('https://images.unsplash.com/photo-1602593978192-ca57c62746a6?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-section h1 {
+      margin: 20px;
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+    
+    /* Tabs Section */
+    .tabs {
+      display: flex;
+      justify-content: space-between;
+      background: #222;
+      padding: 10px 0;
+    }
+
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    .tab:hover,
+    .tab.active {
+      color: #fff;
+    }
+
+    /* Cards Section */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin: 0;
+      color: #fff;
+    }
+
+    .card p {
+      margin: 10px 0;
+      color: #aaa;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #4caf50;
+      font-weight: bold;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+
+      .tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .tab {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/destination">Destinations</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+  <div class="hero-section">
+    <h1>Explore Famous Beaches</h1>
+  </div>
+
+  <div class="container">
+    <!-- Tabs -->
+    <div class="tabs">
+      <div class="tab active">Popular Beaches</div>
+      <div class="tab">Best Time to Visit</div>
+      <div class="tab">Beach Activities</div>
+      <div class="tab">Travel Tips</div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards">
+
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://hblimg.mmtcdn.com/content/hubble/img/destimg/mmt/destination/t_ufs/m_goa_main_tv_destination_img_1_l_759_1138.jpg" alt="Goa Beach">
+        <div class="card-content">
+          <h3>Goa Beaches</h3>
+          <p>Experience the vibrant culture, golden sands, and lively atmosphere of Goa's beaches.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://img.veenaworld.com/wp-content/uploads/2021/06/Best-Places-to-Visit-in-Pondicherry-scaled.jpg">
+        <div class="card-content">
+          <h3>Pondicherry Beach</h3>
+          <p>Relax at the calm, scenic beaches of Pondicherry with its colonial charm and French influence.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://www.fivestars-thailand.com/images/article/display/a_1709046776.jpg">
+        <div class="card-content">
+          <h3>Phuket Beaches, Thailand</h3>
+          <p>Famous for its clear waters and stunning scenery, Phuket offers a range of beaches for all kinds of travelers.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <img src="https://imageio.forbes.com/specials-images/imageserve/675172642/0x0.jpg?format=jpg&height=900&width=1600&fit=bounds">
+        <div class="card-content">
+          <h3>Bali Beaches, Indonesia</h3>
+          <p>Known for its surf culture, rich traditions, and beautiful beaches, Bali is a perfect tropical escape.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card">
+        <img src="https://www.travelescape.in/wp-content/uploads/2017/08/Digha-Beach.jpg">
+        <div class="card-content">
+          <h3>Digha Beach, West Bengal</h3>
+          <p>Famous for its peaceful atmosphere, Digha offers a relaxing retreat with scenic views of the Bay of Bengal.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card">
+        <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202401/659d0e0c95ec8-india-to-build-new-airport-in-lakshadweeps-minicoy-island-09124386-16x9.jpg?size=948:533">
+        <div class="card-content">
+          <h3>Lakshadweep Islands</h3>
+          <p>Explore the pristine beaches of Lakshadweep, a tropical paradise known for its crystal-clear waters and coral reefs.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card">
+        <img src="https://www.india.com/wp-content/uploads/2024/08/Geographical-Review-and-Climate-1.jpg" alt="Andaman & Nicobar Beaches">
+        <div class="card-content">
+          <h3>Andaman & Nicobar Islands</h3>
+          <p>Discover the untouched beauty of Andaman's beaches, offering perfect serenity and exotic marine life.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+       
+      <!-- Card 8 -->
+      <div class="card">
+        <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/a7/1a/90/goa-quick-guide-largejpg.jpg" alt="Baga Beach">
+        <div class="card-content">
+          <h3>Baga Beach, Goa</h3>
+          <p>Known for its vibrant nightlife and water sports, Baga Beach is a popular destination in Goa for both relaxation and adventure.</p>
+          <a href="#">Learn More</a>
+        </div>
+    </div>
+    
+
+      <!-- Card 9-->
+      <div class="card">
+        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/82/77/5f/chandrabhaga-beach.jpg?w=1200&h=-1&s=1" alt="Bhubaneswar Beach">
+        <div class="card-content">
+          <h3>Bhubaneswar Beaches, Odisha</h3>
+          <p>Enjoy the quiet beaches of Bhubaneswar, known for their natural beauty and cultural significance.</p>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

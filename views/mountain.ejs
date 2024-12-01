@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Destinations</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: flex-start; /* Aligns navigation to the left */
+            align-items: center;
+            padding-left: 20px; /* Adds spacing from the edge */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin-top: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 15px;
+           
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        .hero-section {
+            position: relative;
+            height: 400px;
+            background: url('https://hips.hearstapps.com/hmg-prod/images/ama-dablam-mountain-peak-view-from-chola-pass-royalty-free-image-1623254695.jpg') center/cover no-repeat;
+            color: #fff;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .hero-section h1 {
+      margin: 20px;
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+        /* Tabs Section */
+        .tabs {
+            display: flex;
+            justify-content: space-between;
+            background: #222;
+            padding: 10px 0;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.3s;
+        }
+
+        .tab:hover,
+        .tab.active {
+            color: #fff;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 0;
+            color: #fff;
+        }
+
+        .card p {
+            margin: 10px 0;
+            color: #aaa;
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .tab {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/destination">Destinations</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="hero-section">
+        <h1
+            style="color: wheat; font-family: 'Arial', sans-serif; font-size: 2 em; font-weight: bold; text-align: center; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 0.5em;">
+            Mountain Adventures</h1>
+
+    </div>
+
+
+    <div class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active">Famous Temples</div>
+
+            <div class="tab">Best Time to Visit</div>
+            <div class="tab">Travel Tips</div>
+        </div>
+
+        <!-- Cards -->
+        <div class="cards">
+            <!-- Adventure Destinations -->
+            <div class="card">
+                <img src="https://t2.gstatic.com/licensed-image?q=tbn:ANd9GcTeYbHafBmO10UF9wP5I3Sh42a7KO_8m-_6COnrzhGke4NuQQPFe0jQemnZyVLj7iF9"
+                    alt="Everest Base Camp">
+                <div class="card-content">
+                    <h3>Everest Base Camp</h3>
+                    <p>Experience breathtaking views of Everest on this thrilling trek.</p>
+                    <a href="/mountain-first">Explore Packages</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://outdoorhimalayan.com/wp-content/uploads/2018/03/kanchenjunga-expedition-nepal_outdoor-himalayan-treks-1.jpg"
+                    alt="Kanchenjungha Expedition">
+                <div class="card-content">
+                    <h3>Kanchenjungha Expedition</h3>
+                    <p>A challenging climb with incredible mountain views.</p>
+                    <a href="#">Explore Packages</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/1200px-Machu_Picchu%2C_Peru.jpg"
+                    alt="Machu Picchu">
+                <div class="card-content">
+                    <h3>Machu Picchu</h3>
+                    <p>Discover the wonders of this ancient Incan city.</p>
+                    <a href="#">Explore Packages</a>
+                </div>
+            </div>
+            <!-- Yosemite National Park -->
+            <div class="card">
+                <img src="https://www.travelandleisure.com/thmb/7Qj5lwYOMIU02SQaKbXEsBylWos=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Yosemite_ValeriedeLeon01-11d837fc52cf4d95a5a554f981074cb5.jpg"
+                    alt="Yosemite National Park">
+                <div class="card-content">
+                    <h3>Yosemite National Park</h3>
+                    <p>Explore granite cliffs, waterfalls, and giant sequoias.</p>
+                    <a href="#">Explore Packages</a>
+                </div>
+            </div>
+
+            <!-- Mount Abu -->
+            <div class="card">
+                <img src="https://t0.gstatic.com/licensed-image?q=tbn:ANd9GcSAI0yW2ysHoxIOIxMq17nmwpQtihXfXf2k6YuLswpYeHGBe-48WfWLQStqTnFhxD1O"
+                    alt="Mount Abu">
+                <div class="card-content">
+                    <h3>Mount Abu</h3>
+                    <p>Rajasthan’s only hill station, offering cool climate and greenery.</p>
+                    <a href="#">Explore Packages</a>
+                </div>
+            </div>
+
+            <!-- Poon Hill, Nepal -->
+            <div class="card">
+                <img src="https://stingynomads.com/wp-content/uploads/2019/03/Poon-Hill-trek-itinerary-Nepal.jpg.webp"
+                    alt="Poon Hill, Nepal">
+                <div class="card-content">
+                    <h3>Poon Hill, Nepal</h3>
+                    <p>Famous for sunrise views of Annapurna and Dhaulagiri ranges.</p>
+                    <a href="#">Explore Packages</a>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <img src="https://t3.gstatic.com/licensed-image?q=tbn:ANd9GcRdndkg_6gFZ6s7wA2QDK8rXgXEiy41eNdCiBlyh7gJx1qa005CmJrORToiFGzm7jLZ"
+                    alt="Mount Kilimanjaro">
+                <div class="card-content">
+                    <h3>Mount Kilimanjaro</h3>
+                    <p>Trek to the summit of Africa’s tallest peak.</p>
+                    <a href="#">Explore Packages</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
