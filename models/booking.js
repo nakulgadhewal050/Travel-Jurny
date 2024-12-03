@@ -8,9 +8,9 @@ const bookingSchema = mongoose.Schema({
     fullname: String, 
     email: String,
     phone: Number,
-    date: Date, // Use Date instead of Number
+    date: Date, 
     people: Number,
-    upi: String,
+    
 });
 
 module.exports = mongoose.model("booking", bookingSchema);

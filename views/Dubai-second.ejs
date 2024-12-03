@@ -11,8 +11,35 @@
       margin: 0;
       padding: 0;
       background-color: #111;
-      color: #fff;  
+      color: black;  
     }
+
+    nav {
+            display: flex;
+            justify-content: flex-start; /* Aligns navigation to the left */
+            align-items: center;
+            padding-left: 20px; /* Adds spacing from the edge */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin-top: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 15px;
+           
+        }
 
     .container {
       max-width: 1200px;
@@ -24,7 +51,7 @@
     .hero-section {
       position: relative;
       height: 400px;
-      background: url('https://www.aanavandi.com/blog/wp-content/uploads/2019/08/ksrtc-munnar-Riyas-Paloli%E2%80%8E.jpg') center/cover no-repeat;
+      background: url('https://deih43ym53wif.cloudfront.net/dubai-palm-jumeirah-island-shutterstock_1291548640.jpg_3ab124c2b9.jpg') center/cover no-repeat;
       color: #fff;
       display: flex;
       align-items: flex-end;
@@ -142,6 +169,14 @@
   </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/destination">Destinations</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
   <div class="hero-section">
     <h1>Explore Incredible Travel Packages</h1>
   </div>
@@ -168,7 +203,7 @@
             <li><strong>Activities: 5</strong></li>
           </ul>
           <div class="price">Price: ₹14990</div>
-          <a href="#">Book Now</a>
+          <a href="/booking">Book Now</a>
         </div>
       </div>
 
@@ -183,7 +218,7 @@
             <li><strong>Activities:</strong> 8</li>
           </ul>
           <div class="price">Price: ₹29990</div>
-          <a href="#">Book Now</a>
+          <a href="/booking">Book Now</a>
         </div>
       </div>
 
@@ -198,7 +233,7 @@
             <li><strong>Activities:</strong>10</li>
           </ul>
           <div class="price">Price: ₹39990</div>
-          <a href="#">Book Now</a>
+          <a href="/booking">Book Now</a>
         </div>
       </div>
 
@@ -213,7 +248,7 @@
             <li><strong>Activities:</strong> 12</li>
           </ul>
           <div class="price">Price: ₹49990</div>
-          <a href="#">Book Now</a>
+          <a href="/booking">Book Now</a>
         </div>
       </div>
     </div>

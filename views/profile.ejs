@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .booking {
+      border-bottom: 1px solid #ddd;
+      padding: 15px 0;
+    }
+
+    .booking:last-child {
+      border-bottom: none;
+    }
+
+    .booking strong {
+      color: #555;
+    }
+
+    .booking span {
+      display: block;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Bookings</h1>
+    <% if (bookings.length > 0) { %>
+      <% bookings.forEach(booking => { %>
+        <div class="booking">
+          <span><strong>Full Name:</strong> <%= booking.fullname %></span>
+          <span><strong>Email:</strong> <%= booking.email %></span>
+          <span><strong>Phone:</strong> <%= booking.phone %></span>
+          <span><strong>Date:</strong> <%= booking.date.toDateString() %></span>
+          <span><strong>People:</strong> <%= booking.people %></span>
+          <span><strong>UPI:</strong> <%= booking.upi %></span>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>No bookings found.</p>
+    <% } %>
+  </div>
+</body>
+</html>

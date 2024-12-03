@@ -1,12 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Destinations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        header {
+            background-color: rgb(31, 24, 225);
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgb(31, 24, 225);
+            color: #fff;
+            padding: 0.5rem 0;
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* nav ul li a:hover {
+            text-decoration: underline;
+        } */
+
+        h1,
+        h2,
+        h3 {
+            margin: 0.5rem 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: #333;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .destination {
+            background: #222;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .destination:last-child {
+            border-bottom: none;
+        }
+
+        .destination h3 {
+            color: white;
+        }
+
+        .destination p {
+            margin: 0.5rem 0;
+            color: rgb(116, 111, 111);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: rgb(37, 10, 215);
+            color: #fff;
+            margin-top: 2rem;
+        }
+
+        .hr {
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    hey
-    
+    <header>
+        <h1>Explore Our Destinations</h1>
+        <p>Discover amazing places around the world.</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home" class="no-underline hover:no-underline">Home</a></li>
+            <li><a href="/about" class="no-underline hover:no-underline">About Us</a></li>
+            <li><a href="/destination" class="no-underline hover:no-underline">Destinations</a></li>
+            <li><a href="/contact" class="no-underline hover:no-underline">Contact</a></li>
+        </ul>
+    </nav>
+    <div id="destinations" class="container">
+        <div class="destination">
+            <h3>Ujjain</h3>
+            <p><strong>Highlights:</strong> Mahakaleshwar Temple, Kal Bhairav Temple, Ram Ghat</p>
+            <p><strong>Best Time to Visit:</strong> October to March</p>
+            <p><strong>Why Visit:</strong> A spiritual hub with ancient temples and serene ghats.</p>
+        </div>
+        <hr class="hr">
+        <div class="destination">
+            <h3>Goa</h3>
+            <p><strong>Highlights:</strong> Beaches, Fort Aguada, Basilica of Bom Jesus</p>
+            <p><strong>Best Time to Visit:</strong> November to February</p>
+            <p><strong>Why Visit:</strong> Relaxing beaches, vibrant nightlife, and Portuguese heritage.</p>
+        </div>
+        <hr class="hr">
+        <div class="destination">
+            <h3>Maldives</h3>
+            <p><strong>Highlights:</strong> Overwater Villas, Coral Reefs, Male City</p>
+            <p><strong>Best Time to Visit:</strong> November to April</p>
+            <p><strong>Why Visit:</strong> Pristine beaches, luxury resorts, and underwater adventures.</p>
+        </div>
+        <hr class="hr">
+        <div class="destination">
+            <h3>Agra</h3>
+            <p><strong>Highlights:</strong> Taj Mahal, Agra Fort, Fatehpur Sikri</p>
+            <p><strong>Best Time to Visit:</strong> November to March</p>
+            <p><strong>Why Visit:</strong> Iconic Mughal architecture and cultural history.</p>
+        </div>
+        <hr class="hr">
+        <div class="destination">
+            <h3>Varanasi</h3>
+            <p><strong>Highlights:</strong> Ganga Aarti, Kashi Vishwanath Temple, Sarnath</p>
+            <p><strong>Best Time to Visit:</strong> October to March</p>
+            <p><strong>Why Visit:</strong> Spiritual experiences and ancient ghats.</p>
+        </div>
+        <hr class="hr">
+        <div class="destination">
+            <h3>Kashmir</h3>
+            <p><strong>Highlights:</strong> Dal Lake, Gulmarg, Pahalgam</p>
+            <p><strong>Best Time to Visit:</strong> March to August</p>
+            <p><strong>Why Visit:</strong> Scenic beauty, houseboats, and adventure activities.</p>
+        </div>
+        <hr class="hr">
+        <div class="destination">
+            <h3>Shimla</h3>
+            <p><strong>Highlights:</strong> Mall Road, Kufri, Jakhoo Temple</p>
+            <p><strong>Best Time to Visit:</strong> March to June</p>
+            <p><strong>Why Visit:</strong> Pleasant weather, colonial charm, and snowy peaks.</p>
+        </div>
+        <hr class="hr">
+        <div class="destination">
+            <h3>Badrinath</h3>
+            <p><strong>Highlights:</strong> Badrinath Temple, Mana Village, Vasudhara Falls</p>
+            <p><strong>Best Time to Visit:</strong> May to October</p>
+            <p><strong>Why Visit:</strong> Sacred pilgrimage site and stunning Himalayan views.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Travel Planner. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

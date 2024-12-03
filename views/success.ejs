@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 0;
+            
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: flex-start; /* Aligns navigation to the left */
+            align-items: center;
+            padding-left: 20px; /* Adds spacing from the edge */
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin-top: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 15px;
+           
+        }
+
+        .container {
+            text-align: center;
+            padding: 50px;
+            margin-top: 50px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h1 {
+            color: #28a745;
+            font-size: 36px;
+        }
+
+        .container p {
+            font-size: 20px;
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="mt-4">
+        <ul class="flex space-x-4">
+            <li><a href="/home" class="no-underline hover:no-underline">Home</a></li>
+            <li><a href="/about" class="no-underline hover:no-underline">About</a></li>
+            <li><a href="/destination" class="no-underline hover:no-underline">Destinations</a></li>
+            <li><a href="/contact" class="no-underline hover:no-underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Thank You for Your Booking!</h1>
+        <p>Your booking has been successfully received. We are looking forward to hosting you!</p>
+        <a href="/home" class="button">Go to Homepage</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Travel Planner. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

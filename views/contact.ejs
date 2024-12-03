@@ -1,12 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(rgb(63, 103, 223), rgba(211, 251, 249, 0.371)) no-repeat;
+            width: 100wh;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        nav {
+            background-color: rgb(21, 29, 174);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: rgb(169, 204, 223);
+        }
+
+        .container {
+            display: flex;
+            height: 80%;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+
+        .contact-left {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+        }
+
+        .contact-left-title h2 {
+            font-weight: 600;
+            color: rgb(21, 29, 174);
+            font-size: 40px;
+        }
+
+        .contact-left-title hr {
+            border: none;
+            width: 100px;
+            height: 5px;
+            background-color: rgb(21, 29, 174);
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .contact-details {
+            font-size: 18px;
+            color: rgb(21, 29, 174);
+            line-height: 1.8;
+        }
+
+        .contact-details strong {
+            color: black;
+        }
+
+        .right-image {
+            width: 500px;
+        }
+
+        footer {
+            background-color: rgb(21, 29, 174);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-    <a href="about">asdfd</a>
-    hey
+    <nav >
+        <div class="logo" style="">JourniMate</div>
+        <ul>
+            <li><a href="/home" class="no-underline hover:no-underline">Home</a></li>
+            <li><a href="/about" class="no-underline hover:no-underline">About</a></li>
+            <li><a href="/destination" class="no-underline hover:no-underline">Destinations</a></li>
+            <li><a href="/contact" class="no-underline hover:no-underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="contact-left">
+            <div class="contact-left-title">
+                <h2>Contact Us</h2>
+                <hr>
+            </div>
+            <div class="contact-details">
+                <p><strong>Email:</strong> journimate@gmail.com</p>
+                <p><strong>Contact Number:</strong> +1 (234) 567-8901</p>
+            </div>
+        </div>
+        <div class="contact-right">
+            <img class="right-image"
+                src="https://static.vecteezy.com/system/resources/thumbnails/020/371/781/small_2x/call-center-and-customer-care-support-concept-consultant-manager-sitting-at-her-computer-and-talking-with-client-png.png"
+                alt="">
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Travel Planner. All rights reserved.
+    </footer>
 </body>
+
 </html>
